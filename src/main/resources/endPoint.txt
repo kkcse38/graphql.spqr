@@ -1,0 +1,49 @@
+# Write your query or mutation here
+{
+  book(id:"5cbeb4f70384341eb8db0682"){
+    id
+    name
+  }
+}
+
+# Write your query or mutation here
+{
+  books{
+    id
+    name
+  }
+}
+# Write your query or mutation here
+{
+  book(name:"Math"){
+    id
+    name
+  }
+}
+#List all authors
+{
+  authors{
+    id
+    name
+  }
+}
+#Save author
+mutation{
+  author(name:"M Dash"){
+  	name
+    id
+  }
+}
+#Updatebook price
+mutation{
+  bookPrice(id:"5cbee89103843429442f2442", price:1000){
+  	name
+    id
+    price
+    pageCount
+    bookPublisher
+    author{
+      name
+    }
+  }
+}
