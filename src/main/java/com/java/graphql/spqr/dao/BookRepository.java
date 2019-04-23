@@ -7,5 +7,5 @@ import com.java.graphql.spqr.model.Book;
 
 @Repository
 public interface BookRepository extends MongoRepository<Book, String>{
-
+	public Book findBookByName(String name);
 }
