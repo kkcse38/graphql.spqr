@@ -23,8 +23,8 @@ public class AuthorService {
 	private AuthorRepository authorRepository;
 	
 	@GraphQLMutation(name="author")
-	public Author saveAuthor(Author author) {
-		return authorRepository.save(author);
+	public Author saveAuthor(String name) {
+		return authorRepository.save(new Author(name));
 	}
 	
 	@GraphQLQuery(name = "author")
@@ -39,16 +39,6 @@ public class AuthorService {
 	public List<Author> findAllAuthor() {
 		return authorRepository.findAll();
 	}
-	
-	@GraphQLQuery
-	public Author getAuthor(@GraphQLContext Book book) {
-		System.out.println("/nNook Author /n"+book.getAuthor());
-		return author(book.getAuthor().getId());
-	}
-	
-	@GraphQLQuery
-	public Author author(String id) {
-		return authorRepository.findById(id).get();
-	}
+
 	
 }

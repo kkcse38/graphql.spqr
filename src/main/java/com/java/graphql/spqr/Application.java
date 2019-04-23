@@ -28,8 +28,8 @@ public class Application {
 	@PostConstruct
 	public void addBookData() {
 		
-		bookRepository.deleteAll();
-		authorRepository.deleteAll();
+//		bookRepository.deleteAll();
+//		authorRepository.deleteAll();
 		
 		Author a1 = new Author("HC Verma");
 		Author a2 = new Author("KC Sinha");
