@@ -88,7 +88,13 @@ public class Book {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	
+
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", name=" + name + ", bookPublisher=" + bookPublisher + ", author=" + author
+				+ ", pageCount=" + pageCount + ", price=" + price + "]";
+	}
 	
 
 }
